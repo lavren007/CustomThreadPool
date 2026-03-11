@@ -60,6 +60,8 @@ public class Main {
         CustomThreadPool pool = new CustomThreadPool(
                 2, 4, 5, TimeUnit.SECONDS, 2, 1,
                 new CallerRunsPolicy()  // Используем CallerRunsPolicy для демонстрации
+               // new AbortPolicy()
+               // new DiscardPolicy()
         );
 
         logger.info("Pool created: core=2, max=4, queueSize=2, minSpare=1");
